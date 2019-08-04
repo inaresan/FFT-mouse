@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyderエディタ
-
-これは一時的なスクリプトファイルです
-"""
 import cv2
 from PIL import Image
 import numpy as np
@@ -25,7 +19,7 @@ def draw(event,x,y,frags,param):
         z=np.uint8(abs(np.around(np.real(ifft_norm*255))))
         cv2.imshow("output",z)
 N=3
-im=cv2.imread("C:/Users/B1703/data/turtle.jpg",cv2.IMREAD_GRAYSCALE)
+im=cv2.imread("filename",cv2.IMREAD_GRAYSCALE)
 fft=np.fft.fft2(im)
 fft=np.fft.fftshift(fft)
 fft_abs=np.absolute(fft)
